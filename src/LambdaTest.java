@@ -11,22 +11,24 @@ public class LambdaTest {
     @DataProvider(name = "max")
     public static Object[][] max() {
         return new Object[][]{
-                {10.0, 5.0, 10.0},
+                {-10.0, 5.0, 5.0},
+                {0.1, 1.1, 1.1},
+                {100500.0, 5000.0, 100500.0},
                 {-1.0, 10.0, 10.0},
                 {0.0, 0.0, 0.0},
                 {-10.0, NaN, NaN},
                 {POSITIVE_INFINITY, 1e32, POSITIVE_INFINITY}
-                // TODO add 2 more test data here
         };
     }
 
     @DataProvider(name = "sqrt")
     public static Object[][] sqrt() {
         return new Object[][]{
+                {625.0, 25.0},
+                {1000000.0, 1000.0},
                 {25.0, 5.0},
                 {-1.0, NaN},
                 {POSITIVE_INFINITY, POSITIVE_INFINITY}
-                // TODO add 2 more test data here
         };
     }
 
