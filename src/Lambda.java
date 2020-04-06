@@ -9,8 +9,7 @@ public class Lambda {
      * @return lambda expression.
      */
     public static BiFunction<Double, Double, Double> getMax() {
-        // TODO replace null with lambda expression
-        return null;
+        return (aDouble, aDouble2) -> Math.max(aDouble,aDouble2);
     }
 
     /**
@@ -19,7 +18,11 @@ public class Lambda {
      * @return lambda expression.
      */
     public static Function<Double, Double> getSqrt() {
-        // TODO replace null with method reference
-        return null;
+        return aDouble -> Math.sqrt(aDouble) ;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getMax().apply(2.0,3.0));
+        System.out.println(getSqrt().apply(625.0));
     }
 }
