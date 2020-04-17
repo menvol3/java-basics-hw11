@@ -18,7 +18,7 @@ public class Lambda {
      * @return lambda expression.
      */
     public static Function<Double, Double> getSqrt() {
-        return aDouble -> Math.sqrt(aDouble) ;
+        return Math::sqrt;
     }
 
     public static void main(String[] args) {
